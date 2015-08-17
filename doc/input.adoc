@@ -1,8 +1,8 @@
-= <input>
+== <input>
 
-== type Attribute
+=== type Attribute
 
-=== type="text"
+==== type="text"
 * ``<input type="text">``는 기본적인 텍스트 입력창입니다.
 
 [source,html]
@@ -52,7 +52,7 @@
 <input type="text" size="50" placeholder="아이디를 입력해 주세요.">
 ----
 
-=== type="search"
+==== type="search"
 ``<input type="search">``는 내용을 입력할 경우 "삭제(X)" 버튼을 제공합니다. +
 "삭제(X)" 버튼을 클릭하여 입력한 내용을 지울 수 있으며, 그 외 모든 속성은 ``<input type="text">``와 동일합니다.
 
@@ -61,7 +61,7 @@
 <input type="search" size="50" maxlength="20" placeholder="아이디를 입력해 주세요.">
 ----
 
-=== type="password"
+==== type="password"
 ``<input type="password">``은 입력한 내용을 볼 수 없게 합니다. +
 "비밀번호"나 "주민번호" 등을 입력할 때 주로 사용합니다.
 
@@ -70,7 +70,7 @@
 <input type="password" size="50" maxlength="20" placeholder="비밀번호를 입력해 주세요.">
 ----
 
-=== type="radio"
+==== type="radio"
 ``<input type="radio">``는 "라디오 버튼"이라고 부르며, 여러가지 옵션 중 하나를 선택하기 위해 사용합니다. +
 ``size``, ``maxlength``, ``placeholder``등의 속성은 사용할 수 없습니다.
 
@@ -97,7 +97,7 @@
 <input type="radio" name="radio2">
 ----
 
-=== type="checkbox"
+==== type="checkbox"
 ``<input type="checkbox">``는 "체크 박스"이라고 부르며, ``<input type="radio">``와는 달리 다수의 옵션을 선택할 수 있습니다.
 
 [source,html]
@@ -108,7 +108,7 @@
 <input type="checkbox" name="checkbox">
 ----
 
-=== type="file"
+==== type="file"
 ``<input type="file">``는 "파일첨부"를 위해 사용합니다. 게시물 작성 시 로컬 PC에 있는 파일을 첨부할 수 있습니다.
 
 [source,html]
@@ -123,7 +123,7 @@
 <input type="file" accept="image/*">
 ----
 
-=== type="submit"
+==== type="submit"
 ``<input type="submit">``은 ``<form>``의 정보를 전송하기 위해 사용합니다. +
 `value` 속성에 값이 없을 경우 브라우저의 기본값이 출력됩니다.
 
@@ -133,7 +133,7 @@
 <input type="submit" value="보내기">
 ----
 
-=== type="reset"
+==== type="reset"
 ``<input type="reset">``은 ``<form>``의 내용을 초기화 합니다. +
 `<form>` 태그 내에 초기값이 있을 경우 원래의 값으로 되돌립니다. +
 ``<input type="submit">``와 마찬가지로 `value` 속성에 값이 없을 경우 브라우저의 기본값이 출력됩니다.
@@ -144,9 +144,9 @@
 <input type="reset" value="초기화">
 ----
 
-== Etc.
+=== Etc.
 
-=== <select>
+==== <select>
 `<select>` 태그는 여러가지 옵션 중 하나를 선택한다는 점에서 ``<input type="radio">``와 같은 목적을 갖습니다.
 
 [source,html]
@@ -180,7 +180,7 @@
 </select>
 ----
 
-=== <textarea>
+==== <textarea>
 `<textarea>` 태그는 많은 양의 텍스트 정보를 입력하기 위해 사용합니다.
 
 [source,html]
@@ -202,7 +202,7 @@
 <textarea cols="50" rows="10" placeholder="내용을 입력해주세요.">기본값은 이곳에 적어줍니다.</textarea>
 ----
 
-=== <label>
+==== <label>
 `<label>` 태그는 폼요소를 감싸주어 사용성을 좋게합니다.
 
 [source,html]
