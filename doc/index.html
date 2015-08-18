@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.2">
-<title>&lt;a&gt;</title>
+<meta name="description" content="수업시간에 배운 내용을 정리합니다.">
+<title>&lt;html&gt;</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -409,22 +410,167 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 .show-for-print{display:inherit!important}}
 </style>
 </head>
-<body class="article">
+<body class="article toc2 toc-right">
 <div id="header">
+<h1>&lt;html&gt;</h1>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#__head">1. &lt;head&gt;</a>
+<ul class="sectlevel2">
+<li><a href="#_overview">1.1. Overview</a></li>
+<li><a href="#__doctype">1.2. &lt;!DOCTYPE&gt;</a></li>
+<li><a href="#__title">1.3. &lt;title&gt;</a></li>
+<li><a href="#__meta">1.4. &lt;meta&gt;</a></li>
+<li><a href="#__style">1.5. &lt;style&gt;</a></li>
+</ul>
+</li>
+<li><a href="#__a">2. &lt;a&gt;</a>
+<ul class="sectlevel2">
+<li><a href="#_overview_2">2.1. Overview</a></li>
+<li><a href="#_href">2.2. href</a></li>
+<li><a href="#_target">2.3. target</a></li>
+<li><a href="#_etc">2.4. Etc.</a></li>
+</ul>
+</li>
+<li><a href="#__input">3. &lt;input&gt;</a>
+<ul class="sectlevel2">
+<li><a href="#_type_attribute">3.1. type Attribute</a></li>
+<li><a href="#_etc_2">3.2. Etc.</a></li>
+</ul>
+</li>
+<li><a href="#__table">4. &lt;table&gt;</a>
+<ul class="sectlevel2">
+<li><a href="#_example">4.1. Example</a></li>
+<li><a href="#__th">4.2. &lt;th&gt;</a></li>
+<li><a href="#__thead">4.3. &lt;thead&gt;</a></li>
+<li><a href="#__tfoot">4.4. &lt;tfoot&gt;</a></li>
+<li><a href="#__caption">4.5. &lt;caption&gt;</a></li>
+</ul>
+</li>
+</ul>
+</div>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="__a">1. &lt;a&gt;</h2>
+<h2 id="__head">1. &lt;head&gt;</h2>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_overview">1.1. Overview</h3>
+<div class="paragraph">
+<p><code>&lt;body&gt;</code> 태그가 화면에 보여지는 콘텐츠를 다루고 있다면, <code>&lt;head&gt;</code> 태그는 <code>&lt;body&gt;</code> 태그의 내용이 어떻게 브라우저에 보여지는지에 대한 설정 정보를 다룹니다.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="__doctype">1.2. &lt;!DOCTYPE&gt;</h3>
+<div class="paragraph">
+<p><code>DOCTYPE</code>은 문서의 맨 앞에 작성해야 하며, HTML 문서 형식의 버전 정보를 나타냅니다.<br>
+우리가 다룰 <code>DOCTYPE</code>은 <code>HTML 5</code>입니다.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>HTML 4.01 Strict DTD</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>HTML 4.01 Transitional DTD</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>HTML 4.01 Frameset DTD</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd"&gt;</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>HTML 5</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;!DOCTYPE html&gt;</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="__title">1.3. &lt;title&gt;</h3>
+<div class="paragraph">
+<p><code>&lt;title&gt;</code> 태그는 페이지의 제목을 나타냅니다.
+이곳에 적은 문구는 브라우저의 제목 표시줄에 나타나며, html 문서의 필수 요소이기 때문에 <code>&lt;title&gt;</code> 태그가 없는 문서는 문법상 오류입니다.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="__meta">1.4. &lt;meta&gt;</h3>
+<div class="paragraph">
+<p>브라우저 및 검색 엔진의 로봇 등에게 메타 정보를 제공할 때 사용합니다.<br>
+문서의 구조 표현에는 영향을 주지 않으며, 메타 정보에 대한 표준 목록이 없어 <code>name</code>과 <code>content</code> 속성에 원하는 정보를 자유롭게 정의할 수 있습니다.</p>
+</div>
+<div class="paragraph">
+<p>자주 사용하는 <code>name</code>의 속성값으로는 <code>subject</code>, <code>title</code>, <code>author</code>, <code>keywords</code>, <code>viewport</code> 등이 있습니다.</p>
+</div>
+<div class="sect3">
+<h4 id="_charset">1.4.1. charset</h4>
+<div class="paragraph">
+<p><code>&lt;meta charset="utf-8"&gt;</code>과 같이 문서의 인코딩 방식을 지정합니다.
+가끔 웹페이지의 글자가 깨진 것을 볼 수 있는데, 인코딩 설정을 하지 않았거나 잘못 지정한 경우가 대부분입니다.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_viewport">1.4.2. viewport</h4>
+<div class="paragraph">
+<p><code>viewport</code>는 모바일(or 태블릿) 기기의 랜더링 방식을 지정하는 중요한 요소입니다.
+<code>content</code>에는 <code>width</code>, <code>initial-scale</code>, <code>maximum-scale</code>, <code>minimum-scale</code>, <code>user-scalable</code> 등의 정보를 기입합니다.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="__style">1.5. &lt;style&gt;</h3>
+<div class="paragraph">
+<p><code>&lt;style&gt;</code> 태그는 화면에 보여지는 모든 태그의 스타일 설정을 갖고 있습니다.
+<code>&lt;style type="text/css&gt;</code>와 같이 사용하며, DOCTYPE이 HTML 5일 경우 <code>type</code> 속성은 생략 가능합니다.</p>
+</div>
+<div class="paragraph">
+<p>CSS를 외부 링크로 연결할 땐 <code>&lt;link rel="stylesheet" type="text/css" href="style.css"&gt;</code>와 같이 작성합니다.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="__a">2. &lt;a&gt;</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_overview_2">2.1. Overview</h3>
 <div class="paragraph">
 <p><code>&lt;a&gt;</code>는 링크를 위한 태그이며, "에이태그(or 앵커태그)"라고 부릅니다.
 <code>href</code>와 <code>target</code> 속성을 갖습니다.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_href">1.2. href</h3>
+<h3 id="_href">2.2. href</h3>
 <div class="paragraph">
 <p><code>href</code> 속성에는 페이지가 이동할 URL을 적어줍니다.
 URL은 절대경로, 상대경로 모두 가능합니다.</p>
@@ -455,7 +601,7 @@ URL은 절대경로, 상대경로 모두 가능합니다.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_target">1.3. target</h3>
+<h3 id="_target">2.3. target</h3>
 <div class="paragraph">
 <p><code>target</code> 속성에는 링크 이동 시 사용할 브라우저를 지정합니다.<br>
 <code>target</code>을 지정하지 않을 경우, 현재 사용하는 브라우저를 이용합니다.<br>
@@ -499,7 +645,7 @@ URL은 절대경로, 상대경로 모두 가능합니다.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_etc">1.4. Etc.</h3>
+<h3 id="_etc">2.4. Etc.</h3>
 <div class="paragraph">
 <p><code>href</code> 속성에 <code>mailto</code> 프로토콜을 사용할 경우 이메일을 보낼 수 있습니다.</p>
 </div>
@@ -530,10 +676,588 @@ URL은 절대경로, 상대경로 모두 가능합니다.</p>
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="__input">3. &lt;input&gt;</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_type_attribute">3.1. type Attribute</h3>
+<div class="sect3">
+<h4 id="_type_text">3.1.1. type="text"</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><code>&lt;input type="text"&gt;</code>는 기본적인 텍스트 입력창입니다.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;input type="text"&gt;</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>size</code> 속성을 추가하여 입력창의 크기를 지정할 수 있습니다.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;input type="text" size="50"&gt;</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>maxlength</code> 속성을 추가하여 입력할 글자수를 제한할 수 있습니다.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;input type="text" size="50" maxlength="20"&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>value</code> 속성에는 입력창의 기본값을 지정할 수 있습니다.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;input type="text" size="50" maxlength="20" value="sogoonii"&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>readonly</code> 속성은 입력창의 내용을 수정할 수 없게 만듭니다.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;input type="text" size="50" maxlength="20" value="sogoonii" readonly&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>disabled</code> 속성은 입력창을 사용할 수 없게 만듭니다.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;input type="text" size="50" maxlength="20" value="sogoonii" disabled&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>placeholder</code> 속성에는 입력창의 내용이 비어있을 때 보여줄 문구를 지정합니다.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;input type="text" size="50" placeholder="아이디를 입력해 주세요."&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_type_search">3.1.2. type="search"</h4>
+<div class="paragraph">
+<p><code>&lt;input type="search"&gt;</code>는 내용을 입력할 경우 "삭제(X)" 버튼을 제공합니다.<br>
+"삭제(X)" 버튼을 클릭하여 입력한 내용을 지울 수 있으며, 그 외 모든 속성은 <code>&lt;input type="text"&gt;</code>와 동일합니다.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;input type="search" size="50" maxlength="20" placeholder="아이디를 입력해 주세요."&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_type_password">3.1.3. type="password"</h4>
+<div class="paragraph">
+<p><code>&lt;input type="password"&gt;</code>은 입력한 내용을 볼 수 없게 합니다.<br>
+"비밀번호"나 "주민번호" 등을 입력할 때 주로 사용합니다.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;input type="password" size="50" maxlength="20" placeholder="비밀번호를 입력해 주세요."&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_type_radio">3.1.4. type="radio"</h4>
+<div class="paragraph">
+<p><code>&lt;input type="radio"&gt;</code>는 "라디오 버튼"이라고 부르며, 여러가지 옵션 중 하나를 선택하기 위해 사용합니다.<br>
+<code>size</code>, <code>maxlength</code>, <code>placeholder</code>등의 속성은 사용할 수 없습니다.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;input type="radio" name="radio"&gt;
+&lt;input type="radio" name="radio"&gt;
+&lt;input type="radio" name="radio"&gt;
+&lt;input type="radio" name="radio"&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>&lt;input type="radio"&gt;</code>는 <code>name</code> 속성의 값이 같은 항목 중 한가지 옵션을 선택할 수 있습니다.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;input type="radio" name="radio1"&gt;
+&lt;input type="radio" name="radio1"&gt;
+&lt;input type="radio" name="radio1"&gt;
+&lt;input type="radio" name="radio1"&gt;
+
+&lt;input type="radio" name="radio2"&gt;
+&lt;input type="radio" name="radio2"&gt;
+&lt;input type="radio" name="radio2"&gt;
+&lt;input type="radio" name="radio2"&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_type_checkbox">3.1.5. type="checkbox"</h4>
+<div class="paragraph">
+<p><code>&lt;input type="checkbox"&gt;</code>는 "체크 박스"이라고 부르며, <code>&lt;input type="radio"&gt;</code>와는 달리 다수의 옵션을 선택할 수 있습니다.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;input type="checkbox" name="checkbox"&gt;
+&lt;input type="checkbox" name="checkbox"&gt;
+&lt;input type="checkbox" name="checkbox"&gt;
+&lt;input type="checkbox" name="checkbox"&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_type_file">3.1.6. type="file"</h4>
+<div class="paragraph">
+<p><code>&lt;input type="file"&gt;</code>는 "파일첨부"를 위해 사용합니다. 게시물 작성 시 로컬 PC에 있는 파일을 첨부할 수 있습니다.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;input type="file"&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>accept</code> 속성을 통해 첨부 파일의 형태를 제한할 수 있습니다. (예: <code>accept="image/*"</code> 속성을 추가하여 이미지 태그만 첨부하게 함)</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;input type="file" accept="image/*"&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_type_submit">3.1.7. type="submit"</h4>
+<div class="paragraph">
+<p><code>&lt;input type="submit"&gt;</code>은 <code>&lt;form&gt;</code>의 정보를 전송하기 위해 사용합니다.<br>
+<code>value</code> 속성에 값이 없을 경우 브라우저의 기본값이 출력됩니다.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;input type="submit"&gt;
+&lt;input type="submit" value="보내기"&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_type_reset">3.1.8. type="reset"</h4>
+<div class="paragraph">
+<p><code>&lt;input type="reset"&gt;</code>은 <code>&lt;form&gt;</code>의 내용을 초기화 합니다.<br>
+<code>&lt;form&gt;</code> 태그 내에 초기값이 있을 경우 원래의 값으로 되돌립니다.<br>
+<code>&lt;input type="submit"&gt;</code>와 마찬가지로 <code>value</code> 속성에 값이 없을 경우 브라우저의 기본값이 출력됩니다.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;input type="reset"&gt;
+&lt;input type="reset" value="초기화"&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_etc_2">3.2. Etc.</h3>
+<div class="sect3">
+<h4 id="__select">3.2.1. &lt;select&gt;</h4>
+<div class="paragraph">
+<p><code>&lt;select&gt;</code> 태그는 여러가지 옵션 중 하나를 선택한다는 점에서 <code>&lt;input type="radio"&gt;</code>와 같은 목적을 갖습니다.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;select&gt;
+	&lt;option&gt;다음 옵션 중 하나를 선택하세요.&lt;/option&gt;
+	&lt;option&gt;옵션 1&lt;/option&gt;
+	&lt;option&gt;옵션 2&lt;/option&gt;
+	&lt;option&gt;옵션 3&lt;/option&gt;
+	&lt;option&gt;옵션 4&lt;/option&gt;
+	&lt;option&gt;옵션 5&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>옵션은 <code>&lt;option&gt;</code> 태그를 사용하며, 여러개의 옵션을 <code>&lt;optgroup&gt;</code>으로 묶을 수 있습니다.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;select&gt;
+	&lt;option&gt;다음 옵션 중 하나를 선택하세요.&lt;/option&gt;
+	&lt;optgroup label="옵션 1"&gt;
+		&lt;option&gt;옵션 1-1&lt;/option&gt;
+		&lt;option&gt;옵션 1-2&lt;/option&gt;
+		&lt;option&gt;옵션 1-3&lt;/option&gt;
+	&lt;/optgroup&gt;
+	&lt;optgroup label="옵션 2"&gt;
+		&lt;option&gt;옵션 2-1&lt;/option&gt;
+		&lt;option&gt;옵션 2-2&lt;/option&gt;
+		&lt;option&gt;옵션 2-3&lt;/option&gt;
+	&lt;/optgroup&gt;
+&lt;/select&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="__textarea">3.2.2. &lt;textarea&gt;</h4>
+<div class="paragraph">
+<p><code>&lt;textarea&gt;</code> 태그는 많은 양의 텍스트 정보를 입력하기 위해 사용합니다.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;textarea&gt;&lt;/textarea&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>cols</code>와 <code>rows</code> 속성을 이용하여 크기를 지정할 수 있습니다.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;textarea cols="50" rows="10"&gt;&lt;/textarea&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>placeholder</code>를 사용할 수 있으며, 기본값은 시작태그와 종료태그 사이에 적어줍니다.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;textarea cols="50" rows="10" placeholder="내용을 입력해주세요."&gt;기본값은 이곳에 적어줍니다.&lt;/textarea&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="__label">3.2.3. &lt;label&gt;</h4>
+<div class="paragraph">
+<p><code>&lt;label&gt;</code> 태그는 폼요소를 감싸주어 사용성을 좋게합니다.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;label&gt;아이디 &lt;input type="text"&gt;&lt;/label&gt;
+&lt;label&gt;패스워드 &lt;input type="password"&gt;&lt;/label&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>폼요소를 감싸지 않을 경우엔 <code>id</code>와 <code>for</code> 속성으로 연결해줍니다.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;label for="id"&gt;아이디&lt;/label&gt;: &lt;input type="text" id="id"&gt;
+&lt;label for="password"&gt;패스워드&lt;/label&gt;: &lt;input type="text" id="password"&gt;
+통신사:
+	&lt;input type="radio" name="mobile" id="skt"&gt; &lt;label for="skt"&gt;SKT&lt;/label&gt;
+	&lt;input type="radio" name="mobile" id="kt"&gt; &lt;label for="kt"&gt;KT&lt;/label&gt;
+	&lt;input type="radio" name="mobile" id="lg"&gt; &lt;label for="lg"&gt;LG U+&lt;/label&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="__table">4. &lt;table&gt;</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_example">4.1. Example</h3>
+<div class="sect3">
+<h4 id="_basic">4.1.1. Basic</h4>
+<div class="paragraph">
+<p>&lt;table&gt;, &lt;tr&gt;, &lt;td&gt; 태그로 구성된 기본 테이블입니다.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td&gt;1행 1열&lt;/td&gt;
+		&lt;td&gt;1행 2열&lt;/td&gt;
+		&lt;td&gt;1행 3열&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;2행 1열&lt;/td&gt;
+		&lt;td&gt;2행 2열&lt;/td&gt;
+		&lt;td&gt;2행 3열&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;3행 1열&lt;/td&gt;
+		&lt;td&gt;3행 2열&lt;/td&gt;
+		&lt;td&gt;3행 3열&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_colspan">4.1.2. colspan</h4>
+<div class="paragraph">
+<p>colspan 속성을 이용하여 두개 이상의 <code>&lt;td&gt;</code>를 하나로 합칠 수 있습니다.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;1행 1열&lt;/td&gt;
+		&lt;td&gt;1행 3열&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;2행 1열&lt;/td&gt;
+		&lt;td colspan="2"&gt;2행 2열&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;3행 1열&lt;/td&gt;
+		&lt;td&gt;3행 2열&lt;/td&gt;
+		&lt;td&gt;3행 3열&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_rowspan">4.1.3. rowspan</h4>
+<div class="paragraph">
+<p>rowspan 속성을 이용하여 서로 다른 <code>&lt;tr&gt;</code>에 있는 <code>&lt;td&gt;</code>를 합칠 수도 있습니다.<br>
+<code>&lt;td&gt;</code>의 콘텐츠는 상/하 중앙에 위치합니다.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td rowspan="2"&gt;1행 1열&lt;/td&gt;
+		&lt;td&gt;1행 2열&lt;/td&gt;
+		&lt;td&gt;1행 3열&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;2행 2열&lt;/td&gt;
+		&lt;td rowspan="2"&gt;2행 3열&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;3행 1열&lt;/td&gt;
+		&lt;td&gt;3행 2열&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="__th">4.2. &lt;th&gt;</h3>
+<div class="paragraph">
+<p>제목을 나타내는 셀은 &lt;th&gt; 태그를 사용하는 것이 좋습니다.<br>
+<code>&lt;th&gt;</code> 태그는 <code>bold</code>로 표현되며, 좌/우 중앙정렬이 기본입니다.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;table&gt;
+	&lt;tr&gt;
+		&lt;th&gt;제목&lt;/th&gt;
+		&lt;th&gt;제목&lt;/th&gt;
+		&lt;th&gt;제목&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;1행 1열&lt;/td&gt;
+		&lt;td&gt;1행 2열&lt;/td&gt;
+		&lt;td&gt;1행 3열&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;2행 1열&lt;/td&gt;
+		&lt;td&gt;2행 2열&lt;/td&gt;
+		&lt;td&gt;2행 3열&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;3행 1열&lt;/td&gt;
+		&lt;td&gt;3행 2열&lt;/td&gt;
+		&lt;td&gt;3행 3열&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>&lt;th&gt;</code> 태그는 상단 뿐 아니라 촤측, 우측 어디든 사용 가능합니다.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;table&gt;
+	&lt;tr&gt;
+		&lt;th&gt;&lt;/th&gt;
+		&lt;th&gt;제목&lt;/th&gt;
+		&lt;th&gt;제목&lt;/th&gt;
+		&lt;th&gt;제목&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;th&gt;제목&lt;/th&gt;
+		&lt;td&gt;1행 1열&lt;/td&gt;
+		&lt;td&gt;1행 2열&lt;/td&gt;
+		&lt;td&gt;1행 3열&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;th&gt;제목&lt;/th&gt;
+		&lt;td&gt;2행 1열&lt;/td&gt;
+		&lt;td&gt;2행 2열&lt;/td&gt;
+		&lt;td&gt;2행 3열&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;th&gt;제목&lt;/th&gt;
+		&lt;td&gt;3행 1열&lt;/td&gt;
+		&lt;td&gt;3행 2열&lt;/td&gt;
+		&lt;td&gt;3행 3열&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="__thead">4.3. &lt;thead&gt;</h3>
+<div class="paragraph">
+<p>상단에 <code>&lt;th&gt;</code>만으로 구성된 <code>&lt;tr&gt;</code>은 <code>&lt;thead&gt;</code> 태그로 감싸주시는 것이 좋습니다.<br>
+이 때, <code>&lt;thead&gt;</code>를 제외한 영역은 <code>&lt;tbody&gt;</code>로 감싸주세요.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;table&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th&gt;&lt;/th&gt;
+			&lt;th&gt;제목&lt;/th&gt;
+			&lt;th&gt;제목&lt;/th&gt;
+			&lt;th&gt;제목&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;th&gt;제목&lt;/th&gt;
+			&lt;td&gt;1행 1열&lt;/td&gt;
+			&lt;td&gt;1행 2열&lt;/td&gt;
+			&lt;td&gt;1행 3열&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th&gt;제목&lt;/th&gt;
+			&lt;td&gt;2행 1열&lt;/td&gt;
+			&lt;td&gt;2행 2열&lt;/td&gt;
+			&lt;td&gt;2행 3열&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th&gt;제목&lt;/th&gt;
+			&lt;td&gt;3행 1열&lt;/td&gt;
+			&lt;td&gt;3행 2열&lt;/td&gt;
+			&lt;td&gt;3행 3열&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="__tfoot">4.4. &lt;tfoot&gt;</h3>
+<div class="paragraph">
+<p>필요에 따라 <code>&lt;tfoot&gt;</code> 태그를 사용할 수 있습니다.<br>
+일반적으로 합계 등의 정보를 표현할 때 주로 사용합니다.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;table&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th&gt;&lt;/th&gt;
+			&lt;th&gt;제목&lt;/th&gt;
+			&lt;th&gt;제목&lt;/th&gt;
+			&lt;th&gt;제목&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tfoot&gt;
+		&lt;tr&gt;
+			&lt;th&gt;합계&lt;/th&gt;
+			&lt;td&gt;내용&lt;/td&gt;
+			&lt;td&gt;내용&lt;/td&gt;
+			&lt;td&gt;내용&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tfoot&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;th&gt;제목&lt;/th&gt;
+			&lt;td&gt;1행 1열&lt;/td&gt;
+			&lt;td&gt;1행 2열&lt;/td&gt;
+			&lt;td&gt;1행 3열&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th&gt;제목&lt;/th&gt;
+			&lt;td&gt;2행 1열&lt;/td&gt;
+			&lt;td&gt;2행 2열&lt;/td&gt;
+			&lt;td&gt;2행 3열&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th&gt;제목&lt;/th&gt;
+			&lt;td&gt;3행 1열&lt;/td&gt;
+			&lt;td&gt;3행 2열&lt;/td&gt;
+			&lt;td&gt;3행 3열&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="__caption">4.5. &lt;caption&gt;</h3>
+<div class="paragraph">
+<p><code>&lt;caption&gt;</code> 태그는 "테이블의 제목"을 나타냅니다.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;table&gt;
+	&lt;caption&gt;테이블의 제목&lt;/caption&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th&gt;&lt;/th&gt;
+			&lt;th&gt;제목&lt;/th&gt;
+			&lt;th&gt;제목&lt;/th&gt;
+			&lt;th&gt;제목&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tfoot&gt;
+		&lt;tr&gt;
+			&lt;th&gt;합계&lt;/th&gt;
+			&lt;td&gt;내용&lt;/td&gt;
+			&lt;td&gt;내용&lt;/td&gt;
+			&lt;td&gt;내용&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tfoot&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;th&gt;제목&lt;/th&gt;
+			&lt;td&gt;1행 1열&lt;/td&gt;
+			&lt;td&gt;1행 2열&lt;/td&gt;
+			&lt;td&gt;1행 3열&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th&gt;제목&lt;/th&gt;
+			&lt;td&gt;2행 1열&lt;/td&gt;
+			&lt;td&gt;2행 2열&lt;/td&gt;
+			&lt;td&gt;2행 3열&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th&gt;제목&lt;/th&gt;
+			&lt;td&gt;3행 1열&lt;/td&gt;
+			&lt;td&gt;3행 2열&lt;/td&gt;
+			&lt;td&gt;3행 3열&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-08-18 11:29:52 대한민국 표준시
+Last updated 2015-08-18 10:08:27 대한민국 표준시
 </div>
 </div>
 </body>

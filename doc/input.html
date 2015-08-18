@@ -411,38 +411,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article">
 <div id="header">
-<h1>&lt;input&gt;</h1>
-<div id="toc" class="toc">
-<div id="toctitle">Table of Contents</div>
-<ul class="sectlevel1">
-<li><a href="#_type_attribute">1. type Attribute</a>
-<ul class="sectlevel2">
-<li><a href="#_type_text">1.1. type="text"</a></li>
-<li><a href="#_type_search">1.2. type="search"</a></li>
-<li><a href="#_type_password">1.3. type="password"</a></li>
-<li><a href="#_type_radio">1.4. type="radio"</a></li>
-<li><a href="#_type_checkbox">1.5. type="checkbox"</a></li>
-<li><a href="#_type_file">1.6. type="file"</a></li>
-<li><a href="#_type_submit">1.7. type="submit"</a></li>
-<li><a href="#_type_reset">1.8. type="reset"</a></li>
-</ul>
-</li>
-<li><a href="#_etc">2. Etc.</a>
-<ul class="sectlevel2">
-<li><a href="#__select">2.1. &lt;select&gt;</a></li>
-<li><a href="#__textarea">2.2. &lt;textarea&gt;</a></li>
-<li><a href="#__label">2.3. &lt;label&gt;</a></li>
-</ul>
-</li>
-</ul>
-</div>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_type_attribute">1. type Attribute</h2>
+<h2 id="__input">1. &lt;input&gt;</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_type_text">1.1. type="text"</h3>
+<h3 id="_type_attribute">1.1. type Attribute</h3>
+<div class="sect3">
+<h4 id="_type_text">1.1.1. type="text"</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -512,8 +489,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_type_search">1.2. type="search"</h3>
+<div class="sect3">
+<h4 id="_type_search">1.1.2. type="search"</h4>
 <div class="paragraph">
 <p><code>&lt;input type="search"&gt;</code>는 내용을 입력할 경우 "삭제(X)" 버튼을 제공합니다.<br>
 "삭제(X)" 버튼을 클릭하여 입력한 내용을 지울 수 있으며, 그 외 모든 속성은 <code>&lt;input type="text"&gt;</code>와 동일합니다.</p>
@@ -524,8 +501,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_type_password">1.3. type="password"</h3>
+<div class="sect3">
+<h4 id="_type_password">1.1.3. type="password"</h4>
 <div class="paragraph">
 <p><code>&lt;input type="password"&gt;</code>은 입력한 내용을 볼 수 없게 합니다.<br>
 "비밀번호"나 "주민번호" 등을 입력할 때 주로 사용합니다.</p>
@@ -536,8 +513,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_type_radio">1.4. type="radio"</h3>
+<div class="sect3">
+<h4 id="_type_radio">1.1.4. type="radio"</h4>
 <div class="paragraph">
 <p><code>&lt;input type="radio"&gt;</code>는 "라디오 버튼"이라고 부르며, 여러가지 옵션 중 하나를 선택하기 위해 사용합니다.<br>
 <code>size</code>, <code>maxlength</code>, <code>placeholder</code>등의 속성은 사용할 수 없습니다.</p>
@@ -567,8 +544,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_type_checkbox">1.5. type="checkbox"</h3>
+<div class="sect3">
+<h4 id="_type_checkbox">1.1.5. type="checkbox"</h4>
 <div class="paragraph">
 <p><code>&lt;input type="checkbox"&gt;</code>는 "체크 박스"이라고 부르며, <code>&lt;input type="radio"&gt;</code>와는 달리 다수의 옵션을 선택할 수 있습니다.</p>
 </div>
@@ -581,8 +558,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_type_file">1.6. type="file"</h3>
+<div class="sect3">
+<h4 id="_type_file">1.1.6. type="file"</h4>
 <div class="paragraph">
 <p><code>&lt;input type="file"&gt;</code>는 "파일첨부"를 위해 사용합니다. 게시물 작성 시 로컬 PC에 있는 파일을 첨부할 수 있습니다.</p>
 </div>
@@ -600,8 +577,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_type_submit">1.7. type="submit"</h3>
+<div class="sect3">
+<h4 id="_type_submit">1.1.7. type="submit"</h4>
 <div class="paragraph">
 <p><code>&lt;input type="submit"&gt;</code>은 <code>&lt;form&gt;</code>의 정보를 전송하기 위해 사용합니다.<br>
 <code>value</code> 속성에 값이 없을 경우 브라우저의 기본값이 출력됩니다.</p>
@@ -613,8 +590,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_type_reset">1.8. type="reset"</h3>
+<div class="sect3">
+<h4 id="_type_reset">1.1.8. type="reset"</h4>
 <div class="paragraph">
 <p><code>&lt;input type="reset"&gt;</code>은 <code>&lt;form&gt;</code>의 내용을 초기화 합니다.<br>
 <code>&lt;form&gt;</code> 태그 내에 초기값이 있을 경우 원래의 값으로 되돌립니다.<br>
@@ -628,12 +605,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_etc">2. Etc.</h2>
-<div class="sectionbody">
 <div class="sect2">
-<h3 id="__select">2.1. &lt;select&gt;</h3>
+<h3 id="_etc">1.2. Etc.</h3>
+<div class="sect3">
+<h4 id="__select">1.2.1. &lt;select&gt;</h4>
 <div class="paragraph">
 <p><code>&lt;select&gt;</code> 태그는 여러가지 옵션 중 하나를 선택한다는 점에서 <code>&lt;input type="radio"&gt;</code>와 같은 목적을 갖습니다.</p>
 </div>
@@ -670,8 +645,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="__textarea">2.2. &lt;textarea&gt;</h3>
+<div class="sect3">
+<h4 id="__textarea">1.2.2. &lt;textarea&gt;</h4>
 <div class="paragraph">
 <p><code>&lt;textarea&gt;</code> 태그는 많은 양의 텍스트 정보를 입력하기 위해 사용합니다.</p>
 </div>
@@ -697,8 +672,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="__label">2.3. &lt;label&gt;</h3>
+<div class="sect3">
+<h4 id="__label">1.2.3. &lt;label&gt;</h4>
 <div class="paragraph">
 <p><code>&lt;label&gt;</code> 태그는 폼요소를 감싸주어 사용성을 좋게합니다.</p>
 </div>
@@ -725,9 +700,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
+</div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-08-17 18:30:10 대한민국 표준시
+Last updated 2015-08-18 10:08:27 대한민국 표준시
 </div>
 </div>
 </body>
