@@ -1,0 +1,132 @@
+:toc: right
+
+== 색상
+
+=== 표기법
+색상명, 색상코드(16진법), rga(or rgba)의 형태로 색상을 지정할 수 있습니다. +
+일반적으로 글꼴색이나 배경색 등을 지정할 때 사용하지만, 테두리와 그라데이션을 적용할 때도 사용합니다.
+[source,css]
+.color name
+----
+{ color: red; }
+----
+[source,css]
+.hexadecimal
+----
+{ color: #ff0000; }
+{ color: #f00; }
+----
+[source,css]
+.rgb
+----
+{ color: rgb(255,0,0); }
+----
+[source,css]
+.rgba
+----
+{ color: rgba(255,0,0,1); }
+----
+
+=== 사용 가능한 속성
+``color``, ``border-color``, `background-color` 속성에 적용할 수 있습니다.
+[source,css]
+.color
+----
+{ color: #f00; }
+----
+[source,css]
+.border-color
+----
+{ border-color: #f00; }
+----
+[source,css]
+.background-color
+----
+{ background-color: #f00; }
+----
+
+== text style
+글자의 스타일을 다루는 방법을 소개합니다.
+
+=== font-style
+``font-style``은 글자의 기울임을 지정하는 속성입니다. +
+``italic`` 속성값을 사용할 수 있으며, 기본값은 ``normal``입니다. +
+기본값으로 ``italic`` 스타일이 적용된 태그에는 ``<em>``, ``<i>``, ``<address>``, `<cite>` 등이 있습니다.
+[source,css]
+----
+{ font-style: italic | noraml; }
+----
+
+=== font-weight
+``font-weight``는 글자의 두께를 지정하는 속성입니다. +
+``bold`` 속성값을 사용할 수 있으며, 기본값은 ``normal``입니다. +
+기본값으로 ``bold`` 스타일이 적용된 태그에는 ``<h1> ~ <h6>``, ``<strong>``, ``<b>``, `<th>` 등이 있습니다.
+[source,css]
+----
+{ font-style: bold | noraml; }
+----
+NOTE: 간혹 ``font-weight``에 100부터 700(100 단위)의 속성값을 사용한 경우를 볼 수 있습니다. +
+모든 브라우저에서 지원하는 것은 아니니 이 점을 참고하여 사용하시면 되겠습니다.
+
+=== font-size
+``font-size``는 화면에 보여지는 텍스트의 크기를 지정하는 속성입니다. +
+단위는 ``px``과 ``em``을 주로 사용하며, ``pt``와 ``rem``단위를 사용할 수도 있습니다.
+[source,css]
+.px
+----
+{ font-size: 12px; }
+----
+[source,css]
+.em
+----
+{ font-size: 1.2em; }
+----
+[source,css]
+.pt
+----
+{ font-size: 12pt; }
+----
+[source,css]
+.rem
+----
+{ font-size: 1.2rem; }
+----
+NOTE: ``em``과 `rem` 단위는 부모와의 관계에 따라 크기가 잘라질 수 있습니다. +
+``pt``는 인쇄를 위한 단위이며, ``1pt``는 0.72inch 입니다. 또 ``px``과 ``pt``는 4:3의 비율을 갖습니다. ( 16px = 12pt )
+
+=== font-family
+``font-family``는 글꼴을 지정하는 속성입니다. +
+글꼴의 이름은 '폰트명'이라고 표현하기도 합니다.
+[source,css]
+----
+{ font-family: nanumgothic; }
+----
+
+폰트명이 한글이거나 폰트명에 공백이 포함되어 있다면, 작은 따옴표(')로 묶어주세요.
+[source,css]
+----
+{ font-family: '나눔고딕'; }
+{ font-family: '맑은 고딕'; }
+{ font-family: 'malgun gothic'; }
+----
+
+콤마(,)로 구분하여 여러 글꼴을 지정하는 것도 가능합니다. +
+브라우저는 먼저 선언한 순으로 글꼴을 찾습니다.
+[source,css]
+----
+{ font-family: '나눔고딕', '맑은 고딕'; }
+----
+
+폰트명을 한글과 영문 모두 사용하는 경우에는 한글명, 영문명 순으로 적어주세요. +
+영문 이름을 적어주는 것은 한글 이름을 인식하지 못하는 경우를 대비하기 위함입니다.
+[source,css]
+----
+{ font-family: '나눔고딕', nanumgothic; }
+----
+
+마지막에는 먼저 선언한 글꼴의 타입에 따라 ``serif``, `sans-serif` 중 한가지 글꼴 타입을 적어주세요. +
+선언한 글꼴을 찾지 못할 경우 비슷한 글꼴을 찾는데 도움을 줍니다.
+[source,css]
+----
+{ font-family: '나눔고딕', nanumgothic, '맑은 고딕', 'malgun gothic', sans-serif; }
+----
