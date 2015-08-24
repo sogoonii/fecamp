@@ -1,0 +1,30 @@
+= <CSS>
+:toc: right
+:toclevels: 2
+:description: 수업시간에 배운 내용을 정리합니다.
+:encoding: utf-8
+
+== 표기법
+[source,css]
+.default
+----
+selector { property: value; } /* 선택자 { 속성: 속성값; } */
+----
+[source,css]
+.class selector
+----
+.class { property: value; }
+----
+[source,css]
+.id selector
+----
+#id { property: value; }
+----
+.pseudo selector
+----
+:hover { property: value; }
+----
+
+include::color.adoc[]
+
+include::text.adoc[]

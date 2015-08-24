@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.2">
-<title>font</title>
+<meta name="description" content="수업시간에 배운 내용을 정리합니다.">
+<title>&lt;CSS&gt;</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -411,44 +412,52 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-right">
 <div id="header">
+<h1>&lt;CSS&gt;</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_font">1. font</a>
+<li><a href="#_표기법">1. 표기법</a></li>
+<li><a href="#_색상">2. 색상</a>
 <ul class="sectlevel2">
-<li><a href="#_font_style">1.1. font-style</a></li>
-<li><a href="#_font_weight">1.2. font-weight</a></li>
-<li><a href="#_font_size">1.3. font-size</a></li>
-<li><a href="#_font_family">1.4. font-family</a></li>
-<li><a href="#_line_height">1.5. line-height</a></li>
-<li><a href="#_font_2">1.6. font</a></li>
+<li><a href="#_표기법_2">2.1. 표기법</a></li>
+<li><a href="#_color값을_적용할_수_있는_속성">2.2. color값을 적용할 수 있는 속성</a></li>
 </ul>
 </li>
-<li><a href="#_text_styles">2. text styles</a>
+<li><a href="#_font">3. font</a>
 <ul class="sectlevel2">
-<li><a href="#_text_align">2.1. text-align</a></li>
-<li><a href="#_text_indent">2.2. text-indent</a></li>
-<li><a href="#_text_decoration">2.3. text-decoration</a></li>
-<li><a href="#_letter_spacing">2.4. letter-spacing</a></li>
-<li><a href="#_word_spacing">2.5. word-spacing</a></li>
-<li><a href="#_white_space">2.6. white-space</a></li>
+<li><a href="#_font_style">3.1. font-style</a></li>
+<li><a href="#_font_weight">3.2. font-weight</a></li>
+<li><a href="#_font_size">3.3. font-size</a></li>
+<li><a href="#_font_family">3.4. font-family</a></li>
+<li><a href="#_line_height">3.5. line-height</a></li>
+<li><a href="#_font_2">3.6. font</a></li>
 </ul>
 </li>
-<li><a href="#_boxes">3. Boxes</a>
+<li><a href="#_text_styles">4. text styles</a>
 <ul class="sectlevel2">
-<li><a href="#_width">3.1. width</a></li>
-<li><a href="#_height">3.2. height</a></li>
-<li><a href="#_margin">3.3. margin</a></li>
-<li><a href="#_padding">3.4. padding</a></li>
-<li><a href="#_border">3.5. border</a></li>
-<li><a href="#_box_sizing">3.6. box-sizing</a></li>
+<li><a href="#_text_align">4.1. text-align</a></li>
+<li><a href="#_text_indent">4.2. text-indent</a></li>
+<li><a href="#_text_decoration">4.3. text-decoration</a></li>
+<li><a href="#_letter_spacing">4.4. letter-spacing</a></li>
+<li><a href="#_word_spacing">4.5. word-spacing</a></li>
+<li><a href="#_white_space">4.6. white-space</a></li>
 </ul>
 </li>
-<li><a href="#_layout">4. Layout</a>
+<li><a href="#_boxes">5. Boxes</a>
 <ul class="sectlevel2">
-<li><a href="#_position">4.1. position</a></li>
-<li><a href="#_float">4.2. float</a></li>
-<li><a href="#_clear">4.3. clear</a></li>
+<li><a href="#_width">5.1. width</a></li>
+<li><a href="#_height">5.2. height</a></li>
+<li><a href="#_margin">5.3. margin</a></li>
+<li><a href="#_padding">5.4. padding</a></li>
+<li><a href="#_border">5.5. border</a></li>
+<li><a href="#_box_sizing">5.6. box-sizing</a></li>
+</ul>
+</li>
+<li><a href="#_layout">6. Layout</a>
+<ul class="sectlevel2">
+<li><a href="#_position">6.1. position</a></li>
+<li><a href="#_float">6.2. float</a></li>
+<li><a href="#_clear">6.3. clear</a></li>
 </ul>
 </li>
 </ul>
@@ -456,10 +465,100 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_font">1. font</h2>
+<h2 id="_표기법">1. 표기법</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="title">default</div>
+<div class="content">
+<pre class="highlight"><code class="language-css" data-lang="css">selector { property: value; } /* 선택자 { 속성: 속성값; } */</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">class selector</div>
+<div class="content">
+<pre class="highlight"><code class="language-css" data-lang="css">.class { property: value; }</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">id selector</div>
+<div class="content">
+<pre class="highlight"><code class="language-css" data-lang="css">#id { property: value; }</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">pseudo selector</div>
+<div class="content">
+<pre>:hover { property: value; }</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_색상">2. 색상</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_font_style">1.1. font-style</h3>
+<h3 id="_표기법_2">2.1. 표기법</h3>
+<div class="paragraph">
+<p>색상명, 색상코드(16진법), rga(or rgba)의 형태로 색상을 지정할 수 있습니다.<br>
+일반적으로 글꼴색이나 배경색 등을 지정할 때 사용하지만, 테두리와 그라데이션을 적용할 때도 사용합니다.</p>
+</div>
+<div class="listingblock">
+<div class="title">color name</div>
+<div class="content">
+<pre class="highlight"><code class="language-css" data-lang="css">{ color: red; }</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">hexadecimal</div>
+<div class="content">
+<pre class="highlight"><code class="language-css" data-lang="css">{ color: #ff0000; }
+{ color: #f00; }</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">rgb</div>
+<div class="content">
+<pre class="highlight"><code class="language-css" data-lang="css">{ color: rgb(255,0,0); }</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">rgba</div>
+<div class="content">
+<pre class="highlight"><code class="language-css" data-lang="css">{ color: rgba(255,0,0,1); }</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_color값을_적용할_수_있는_속성">2.2. color값을 적용할 수 있는 속성</h3>
+<div class="paragraph">
+<p><code>color</code>, <code>border-color</code>, <code>background-color</code> 속성에 적용할 수 있습니다.</p>
+</div>
+<div class="listingblock">
+<div class="title">color</div>
+<div class="content">
+<pre class="highlight"><code class="language-css" data-lang="css">{ color: #f00; }</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">border-color</div>
+<div class="content">
+<pre class="highlight"><code class="language-css" data-lang="css">{ border-color: #f00; }</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">background-color</div>
+<div class="content">
+<pre class="highlight"><code class="language-css" data-lang="css">{ background-color: #f00; }</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_font">3. font</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_font_style">3.1. font-style</h3>
 <div class="paragraph">
 <p><code>font-style</code>은 글자의 기울임을 지정하는 속성입니다.<br>
 <code>italic</code> 속성값을 사용할 수 있으며, 기본값은 <code>normal</code>입니다.<br>
@@ -472,7 +571,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect2">
-<h3 id="_font_weight">1.2. font-weight</h3>
+<h3 id="_font_weight">3.2. font-weight</h3>
 <div class="paragraph">
 <p><code>font-weight</code>는 글자의 두께를 지정하는 속성입니다.<br>
 <code>bold</code> 속성값을 사용할 수 있으며, 기본값은 <code>normal</code>입니다.<br>
@@ -498,7 +597,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect2">
-<h3 id="_font_size">1.3. font-size</h3>
+<h3 id="_font_size">3.3. font-size</h3>
 <div class="paragraph">
 <p><code>font-size</code>는 화면에 보여지는 텍스트의 크기를 지정하는 속성입니다.<br>
 단위는 <code>px</code>과 <code>em</code>을 주로 사용하며, <code>pt</code>와 <code>rem</code>단위를 사용할 수도 있습니다.</p>
@@ -542,7 +641,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect2">
-<h3 id="_font_family">1.4. font-family</h3>
+<h3 id="_font_family">3.4. font-family</h3>
 <div class="paragraph">
 <p><code>font-family</code>는 글꼴을 지정하는 속성입니다.<br>
 글꼴의 이름은 '폰트명&#8217;이라고 표현하기도 합니다.</p>
@@ -596,7 +695,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect2">
-<h3 id="_line_height">1.5. line-height</h3>
+<h3 id="_line_height">3.5. line-height</h3>
 <div class="paragraph">
 <p><code>line-height</code>는 행간을 지정하는 속성입니다.<br>
 단위는 <code>px</code>, <code>em</code>, <code>%</code>를 사용할 수 있고, 단위 없이 숫자만 적용할 수도 있습니다.</p>
@@ -624,7 +723,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect2">
-<h3 id="_font_2">1.6. font</h3>
+<h3 id="_font_2">3.6. font</h3>
 <div class="paragraph">
 <p><code>font-style</code>, <code>font-family</code>, <code>font-size</code>, <code>font-family</code>, <code>line-height</code> 속성을 <code>font</code> 속성으로 축약할 수 있습니다.</p>
 </div>
@@ -638,10 +737,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_text_styles">2. text styles</h2>
+<h2 id="_text_styles">4. text styles</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_text_align">2.1. text-align</h3>
+<h3 id="_text_align">4.1. text-align</h3>
 <div class="paragraph">
 <p><code>text-align</code>은 <code>left</code>, <code>right</code>, <code>center</code>, <code>justify</code> 속성값을 갖습니다.<br>
 텍스트를 정렬하기 위해서는 공간이 필요하기 때문에 <code>text-align</code> 속성은 <code>block</code>의 성질을 가지고 있는 요소에만 적용할 수 있습니다.</p>
@@ -657,7 +756,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect2">
-<h3 id="_text_indent">2.2. text-indent</h3>
+<h3 id="_text_indent">4.2. text-indent</h3>
 <div class="paragraph">
 <p><code>text-indent</code> 속성은 들여쓰기(or 내어쓰기)를 지정하기 위한 속성입니다.</p>
 </div>
@@ -670,7 +769,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect2">
-<h3 id="_text_decoration">2.3. text-decoration</h3>
+<h3 id="_text_decoration">4.3. text-decoration</h3>
 <div class="paragraph">
 <p><code>text-decoration</code>은 텍스트를 꾸미기 위한 속성입니다.<br>
 <code>underline</code>, <code>overline</code>, <code>line-through</code>, <code>none</code> 속성값을 사용할 수 있습니다.</p>
@@ -687,7 +786,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect2">
-<h3 id="_letter_spacing">2.4. letter-spacing</h3>
+<h3 id="_letter_spacing">4.4. letter-spacing</h3>
 <div class="paragraph">
 <p><code>letter-spacing</code>은 글자와 글자 사이의 간격을 조정하는 속성입니다.<br>
 <code>px</code> 단위를 사용하며, 양수와 음수 모두 사용 가능합니다.</p>
@@ -700,7 +799,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect2">
-<h3 id="_word_spacing">2.5. word-spacing</h3>
+<h3 id="_word_spacing">4.5. word-spacing</h3>
 <div class="paragraph">
 <p><code>word-spacing</code>은 단어와 단어 사이의 간격을 조정하는 속성입니다.<br>
 <code>px</code> 단위를 사용하며, 양수와 음수 모두 사용 가능합니다.</p>
@@ -713,7 +812,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect2">
-<h3 id="_white_space">2.6. white-space</h3>
+<h3 id="_white_space">4.6. white-space</h3>
 <div class="paragraph">
 <p><code>white-space</code>은 <code>normal</code>, <code>nowrap</code>의 속성값을 갖습니다.<br>
 <code>normal</code>은 기본값이며, <code>nowrap</code>을 적용할 경우 글자가 강제로 줄바꿈 되지 않습니다.</p>
@@ -729,25 +828,25 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_boxes">3. Boxes</h2>
+<h2 id="_boxes">5. Boxes</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>박스 관련 속성들입니다.</p>
 </div>
 <div class="sect2">
-<h3 id="_width">3.1. width</h3>
+<h3 id="_width">5.1. width</h3>
 <div class="paragraph">
 <p>영역의 너비를 지정합니다.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_height">3.2. height</h3>
+<h3 id="_height">5.2. height</h3>
 <div class="paragraph">
 <p>영역의 높이를 지정합니다.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_margin">3.3. margin</h3>
+<h3 id="_margin">5.3. margin</h3>
 <div class="paragraph">
 <p>영역간의 간격을 지정합니다.</p>
 </div>
@@ -769,7 +868,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect2">
-<h3 id="_padding">3.4. padding</h3>
+<h3 id="_padding">5.4. padding</h3>
 <div class="paragraph">
 <p>영역의 여백을 지정합니다.</p>
 </div>
@@ -791,7 +890,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect2">
-<h3 id="_border">3.5. border</h3>
+<h3 id="_border">5.5. border</h3>
 <div class="paragraph">
 <p>테두리를 지정합니다.</p>
 </div>
@@ -810,7 +909,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect2">
-<h3 id="_box_sizing">3.6. box-sizing</h3>
+<h3 id="_box_sizing">5.6. box-sizing</h3>
 <div class="paragraph">
 <p>박스 모델의 계산 방식을 지정합니다.</p>
 </div>
@@ -828,10 +927,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_layout">4. Layout</h2>
+<h2 id="_layout">6. Layout</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_position">4.1. position</h3>
+<h3 id="_position">6.1. position</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -850,7 +949,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect2">
-<h3 id="_float">4.2. float</h3>
+<h3 id="_float">6.2. float</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -866,7 +965,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect2">
-<h3 id="_clear">4.3. clear</h3>
+<h3 id="_clear">6.3. clear</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -892,7 +991,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-08-24 15:33:14 대한민국 표준시
+Last updated 2015-08-24 15:27:46 대한민국 표준시
 </div>
 </div>
 </body>

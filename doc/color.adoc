@@ -1,0 +1,46 @@
+:toc: right
+
+== 색상
+
+=== 표기법
+색상명, 색상코드(16진법), rga(or rgba)의 형태로 색상을 지정할 수 있습니다. +
+일반적으로 글꼴색이나 배경색 등을 지정할 때 사용하지만, 테두리와 그라데이션을 적용할 때도 사용합니다.
+[source,css]
+.color name
+----
+{ color: red; }
+----
+[source,css]
+.hexadecimal
+----
+{ color: #ff0000; }
+{ color: #f00; }
+----
+[source,css]
+.rgb
+----
+{ color: rgb(255,0,0); }
+----
+[source,css]
+.rgba
+----
+{ color: rgba(255,0,0,1); }
+----
+
+=== color값을 적용할 수 있는 속성
+``color``, ``border-color``, `background-color` 속성에 적용할 수 있습니다.
+[source,css]
+.color
+----
+{ color: #f00; }
+----
+[source,css]
+.border-color
+----
+{ border-color: #f00; }
+----
+[source,css]
+.background-color
+----
+{ background-color: #f00; }
+----
