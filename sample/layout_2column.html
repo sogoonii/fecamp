@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>2단 레이아웃 예제</title>
+    <meta property="og:description" content="2단 레이아웃 예제 모음">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <style>
+    /* common */
+    body {
+        margin: 0;
+        background-color: #eee;
+    }
+
+    .wrap {
+        overflow: hidden;
+        padding: 0 10px;
+    }
+
+    nav {
+        background-color: #789;
+        color: #fff;
+    }
+
+    .content {
+        background-color: #fff;
+    }
+
+    nav,
+    .content {
+        line-height: 100px;
+    }
+
+    /* layout1 */
+    .layout1 {
+        width: 800px;
+        margin: 0 auto;
+    }
+
+    .layout1 nav {
+        float: left;
+        width: 200px;
+    }
+
+    .layout1 .content {
+        float: left;
+        width: 600px;
+    }
+
+    /* layout2 */
+    .layout2 {
+        width: 800px;
+        margin: 20px auto 0;
+    }
+
+    .layout2 nav {
+        float: right;
+        width: 200px;
+    }
+
+    .layout2 .content {
+        float: right;
+        width: 600px;
+    }
+
+    /* layout3 */
+    .layout3 {
+        margin: 20px auto 0;
+    }
+
+    .layout3 nav {
+        float: left;
+        width: 200px;
+    }
+
+    .layout3 .content {
+        overflow: hidden;
+    }
+
+    /* layout4 */
+    .layout4 {
+        margin: 20px auto 0;
+    }
+
+    .layout4 nav {
+        float: right;
+        width: 200px;
+    }
+
+    .layout4 .content {
+        overflow: hidden;
+    }
+
+    /* layout5 */
+    .layout5 {
+        margin: 20px auto 0;
+    }
+
+    .layout5 nav {
+        float: left;
+        width: 25%;
+    }
+
+    .layout5 .content {
+        float: left;
+        width: 75%;
+    }
+
+    /* layout6 */
+    .layout6 {
+        margin: 20px auto 0;
+    }
+
+    .layout6 nav {
+        float: right;
+        width: 25%;
+    }
+
+    .layout6 .content {
+        float: right;
+        width: 75%;
+    }
+    </style>
+</head>
+<body>
+    <div class="wrap layout1">
+        <nav>nav</nav>
+        <div class="content">content</div>
+    </div>
+
+    <div class="wrap layout2">
+        <nav>nav</nav>
+        <div class="content">content</div>
+    </div>
+
+    <div class="wrap layout3">
+        <nav>nav</nav>
+        <div class="content">content</div>
+    </div>
+
+    <div class="wrap layout4">
+        <nav>nav</nav>
+        <div class="content">content</div>
+    </div>
+
+    <div class="wrap layout5">
+        <nav>nav</nav>
+        <div class="content">content</div>
+    </div>
+
+    <div class="wrap layout6">
+        <nav>nav</nav>
+        <div class="content">content</div>
+    </div>
+</body>
+</html>
