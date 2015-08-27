@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>display 속성값에 따른 예제</title>
+    <meta property="og:description" content="display 속성값에 따른 예제를 정리했습니다.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <style>
+    body {
+        margin: 0;
+        padding: 20px 50px 200px;
+    }
+
+    .wrap {
+        padding: 10px 50px;
+    }
+
+    .wrap:after {
+        display: block;
+        clear: both;
+        content: '';
+    }
+
+    .wrap a {
+        border: 1px solid #f00;
+    }
+
+    .inline_block {
+        display: inline-block;
+        padding: 20px;
+    }
+
+    .float_left {
+        float: left;
+        padding: 20px;
+    }
+
+    .block {
+        display: block;
+        padding: 20px;
+    }
+
+    .table {
+        display: table;
+    }
+
+    .td {
+        display: table-cell;
+        padding: 20px;
+    }
+
+    .other_size {
+        height: 100px;
+    }
+    </style>
+</head>
+<body>
+
+    <h1>display: inline;</h1>
+    <ul>
+        <li>공간이 부족할 경우 글자 단위로 개행됩니다.</li>
+    </ul>
+    <div class="wrap">
+        <a href="#">인라인</a>
+        <a href="#">인라인</a>
+        <a href="#">인라인</a>
+        <a href="#">인라인</a>
+        <a href="#">인라인</a>
+        <a href="#">인라인</a>
+        <a href="#">인라인</a>
+        <a href="#">인라인</a>
+        <a href="#">인라인</a>
+        <a href="#">인라인</a>
+        <a href="#">인라인</a>
+        <a href="#">인라인</a>
+        <a href="#">인라인</a>
+        <a href="#">인라인</a>
+        <a href="#">인라인</a>
+        <a href="#">인라인</a>
+        <a href="#">인라인</a>
+        <a href="#">인라인</a>
+    </div>
+
+    <h1>display: inline-block;</h1>
+    <ul>
+        <li>공간이 부족할 경우 태그 단위로 개행됩니다.</li>
+    </ul>
+    <div class="wrap">
+        <a href="#" class="inline_block">인라인블럭</a>
+        <a href="#" class="inline_block">인라인블럭</a>
+        <a href="#" class="inline_block">인라인블럭</a>
+        <a href="#" class="inline_block">인라인블럭</a>
+        <a href="#" class="inline_block">인라인블럭</a>
+        <a href="#" class="inline_block">인라인블럭</a>
+        <a href="#" class="inline_block">인라인블럭</a>
+        <a href="#" class="inline_block">인라인블럭</a>
+        <a href="#" class="inline_block">인라인블럭</a>
+        <a href="#" class="inline_block">인라인블럭</a>
+    </div>
+    <ul>
+        <li>다른 높이를 가진 태그가 섞여 있어도 레이아웃이 틀어지지 않아요.</li>
+    </ul>
+    <div class="wrap">
+        <a href="#" class="inline_block">인라인블럭</a>
+        <a href="#" class="inline_block">인라인블럭</a>
+        <a href="#" class="inline_block">인라인블럭</a>
+        <a href="#" class="inline_block">인라인블럭</a>
+        <a href="#" class="inline_block other_size">인라인블럭</a>
+        <a href="#" class="inline_block">인라인블럭</a>
+        <a href="#" class="inline_block">인라인블럭</a>
+        <a href="#" class="inline_block">인라인블럭</a>
+        <a href="#" class="inline_block">인라인블럭</a>
+        <a href="#" class="inline_block">인라인블럭</a>
+    </div>
+
+    <h1>float: left;</h1>
+    <ul>
+        <li>공간이 부족할 경우 태그 단위로 개행됩니다.</li>
+        <li>display: inline-block 과는 달리 태그 사이에 빈 공백이 없습니다.</li>
+    </ul>
+    <div class="wrap">
+        <a href="#" class="float_left">플롯레프트</a>
+        <a href="#" class="float_left">플롯레프트</a>
+        <a href="#" class="float_left">플롯레프트</a>
+        <a href="#" class="float_left">플롯레프트</a>
+        <a href="#" class="float_left">플롯레프트</a>
+        <a href="#" class="float_left">플롯레프트</a>
+        <a href="#" class="float_left">플롯레프트</a>
+        <a href="#" class="float_left">플롯레프트</a>
+        <a href="#" class="float_left">플롯레프트</a>
+        <a href="#" class="float_left">플롯레프트</a>
+    </div>
+    <ul>
+        <li>다른 태그가 섞여 있을 경우 레이아웃이 틀어집니다.</li>
+        <li>NARADESIGN의 <a href="http://naradesign.net/wp/2008/05/27/144/">float을 clear하는 4가지 방법</a>이라는 포스팅을 읽어보시면 좋을 듯 해요.</li>
+    </ul>
+    <div class="wrap">
+        <a href="#" class="float_left">플롯레프트</a>
+        <a href="#" class="float_left">플롯레프트</a>
+        <a href="#" class="float_left">플롯레프트</a>
+        <a href="#" class="float_left">플롯레프트</a>
+        <a href="#" class="float_left other_size">플롯레프트</a>
+        <a href="#" class="float_left">플롯레프트</a>
+        <a href="#" class="float_left">플롯레프트</a>
+        <a href="#" class="float_left">플롯레프트</a>
+        <a href="#" class="float_left">플롯레프트</a>
+        <a href="#" class="float_left">플롯레프트</a>
+    </div>
+
+    <h1>display: block;</h1>
+    <ul>
+        <li>inline 태그도 block 처럼 사용할 수 있습니다.</li>
+    </ul>
+    <div class="wrap">
+        <a href="#" class="block">블럭</a>
+        <a href="#" class="block">블럭</a>
+        <a href="#" class="block">블럭</a>
+    </div>
+
+    <h1>display: table;</h1>
+    <ul>
+        <li>table, table-cell 속성을 사용하면 흐트러짐 없는 컬럼 구성이 가능합니다.<br>공간이 부족해도 레이아웃이 틀어지지 않습니다.</li>
+    </ul>
+    <div class="wrap">
+        <div class="table">
+            <a href="#" class="td">테이블셀</a>
+            <a href="#" class="td">테이블셀</a>
+            <a href="#" class="td">테이블셀</a>
+            <a href="#" class="td">테이블셀</a>
+            <a href="#" class="td">테이블셀</a>
+            <a href="#" class="td">테이블셀</a>
+            <a href="#" class="td">테이블셀</a>
+            <a href="#" class="td">테이블셀</a>
+            <a href="#" class="td">테이블셀</a>
+            <a href="#" class="td">테이블셀</a>
+        </div>
+    </div>
+
+</body>
+</html>
