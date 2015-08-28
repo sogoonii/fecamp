@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>input 예제</title>
+    <meta property="og:description" content="border를 활용한 input 예제입니다.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <style>
+    body {
+        margin: 0;
+        padding: 20px 50px;
+    }
+
+    div,
+    input {
+        font-size: 14px;
+        font-family: sans-serif;
+    }
+
+    .search1 {
+        display: inline-block;
+    }
+
+    .search1 input {
+        height: 20px;
+        padding: 0 3px;
+        border: 1px solid #000;
+        line-height: 20px;
+        vertical-align: top;
+    }
+
+    .search1 button {
+        padding: 0 10px;
+        border: 1px solid #000;
+        line-height: 20px;
+        vertical-align: top;
+    }
+
+    .search2 {
+        display: inline-block;
+        padding: 2px;
+        border: 1px solid #000;
+    }
+
+    .search2 input {
+        height: 20px;
+        padding: 1px 3px;
+        border: 0;
+        line-height: 20px;
+        vertical-align: top;
+    }
+
+    .search2 button {
+        padding: 0 10px;
+        border: 1px solid #000;
+        line-height: 20px;
+        vertical-align: top;
+    }
+
+    .search3 {
+        display: inline-block;
+        padding: 2px 2px 2px 5px;
+        border: 1px solid #000;
+    }
+
+    .search3 .default_text {
+        display: inline-block;
+        padding: 1px 0;
+        line-height: 20px;
+        vertical-align: top;
+    }
+
+    .search3 input {
+        height: 20px;
+        padding: 1px 3px;
+        border: 0;
+        line-height: 20px;
+        vertical-align: top;
+    }
+
+    .search3 button {
+        padding: 0 10px;
+        border: 1px solid #000;
+        line-height: 20px;
+        vertical-align: top;
+    }
+
+    .search4 {
+        display: inline-block;
+    }
+
+    .search4 .border {
+        display: inline-block;
+        position: relative;
+        border: 1px solid #000;
+    }
+
+    .search4 .default_text {
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: 1px 0 1px 3px;
+        line-height: 20px;
+    }
+
+    .search4 input {
+        height: 20px;
+        padding: 1px 3px 1px 45px;
+        border: 0;
+        line-height: 20px;
+        vertical-align: top;
+    }
+
+    .search4 button {
+        padding: 1px 10px;
+        border: 1px solid #000;
+        line-height: 20px;
+        vertical-align: top;
+    }
+    </style>
+</head>
+<body>
+
+    <h1>기본형</h1>
+    <div>
+        <span class="search1">
+            <input type="text">
+            <button>전송</button>
+        </span>
+    </div>
+
+    <h1>검색 버튼을 테두리 안에 적용</h1>
+    <div>
+        <span class="search2">
+            <input type="text">
+            <button>전송</button>
+        </span>
+    </div>
+
+    <h1>입력창에 기본 문구 적용</h1>
+    <div>
+        <span class="search3">
+            <span class="default_text">http://</span><input type="text" placeholder="www.naver.com">
+            <button>전송</button>
+        </span>
+    </div>
+
+    <h1>또 다른 형태</h1>
+    <div>
+        <span class="search4">
+            <span class="border">
+                <span class="default_text">http://</span>
+                <input type="text" placeholder="www.naver.com">
+            </span>
+            <button>전송</button>
+        </span>
+    </div>
+
+</body>
+</html>
